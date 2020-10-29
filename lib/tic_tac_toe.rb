@@ -60,3 +60,15 @@ def  current_player(board)
     return "O"
   end
 end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  user_input = gets.strip
+  indec = input_to_index(user_input)
+  if valid_move?(board, index) == true
+    move(board, index, player)
+  else
+    turn(board)
+  end
+  display_board(board)
+end

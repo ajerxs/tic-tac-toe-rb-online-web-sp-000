@@ -66,7 +66,7 @@ def turn(board)
   user_input = gets.strip
   indec = input_to_index(user_input)
   if valid_move?(board, index) == true
-    move(board, index, player)
+    move(board, index, current_player(board))
   else
     turn(board)
   end
